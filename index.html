@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pwned By Pwn506</title>
+</head>
+<body bgcolor="#000000">
+<script>
+    function _alert() {
+        alert("Pwned By Pwn");
+        alert("Just for fun :)");
+        return false;
+    }
+    document.oncontextmenu = _alert;
+
+    var names = ["Pwn506", "Sylx", "FA7", "Russia", "PRD8A", "Dingo"];
+    var nameIndex = 0;
+
+    function changeNames() {
+        var currentName = names[nameIndex];
+        document.getElementById("hacked-name").textContent = "Hacked By " + currentName;
+        document.getElementById("name").textContent = currentName;
+        nameIndex = (nameIndex + 1) % names.length;
+    }
+
+    // Change the names every 1 second
+    setInterval(changeNames, 1000);
+</script>
+<p align="center">
+    <img border="0" src="https://cdn.discordapp.com/attachments/1171439943273418823/1171473396316508180/0.png?ex=655cce9e&is=654a599e&hm=6c9b5ca8bc011f9ff96df1a2889c4ad17644d1620bf60392a7a8753455dc01a2&" width="750" height="500">
+</p>
+<p align="center">
+    <font face="Courier" size="6" style="color: #666666;"><span id="hacked-name">Hacked By Mohnad</span></font>
+</p>
+<p align="center">
+    <font face="Courier" size="4"><b>
+        <span style="color: #999999;">
+            <span style="color: #666666;">The greatest pleasure in life is doing what people say you cannot do..</span>
+        </span>
+    </b></font>
+</p>
+<p align="center">
+    <b>
+        <font face="Courier" size="4" color="red">Hello Admin &lt;3 We Are  <span id="name">Oppenheimers</span></font>
+    </b>
+</p>
+<p align="center">
+    <b>
+        <font face="Courier" size="4" color="#666666">Discord : https://discord.gg/PWN</font>
+    </b>
+</p>
+<p align="center">
+</p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: black;
+        }
+
+        h1 {
+            color: black;
+        }
+
+        h3 {
+            color: black;
+        }
+
+        #ip-address {
+            display: inline;
+        }
+
+        #ip-address-label {
+            color: black;
+        }
+
+        #ip-address-value {
+            color: red;
+        }
+
+        #ip-info {
+            font-family: monospace;
+            white-space: pre;
+            color: red;
+        }
+    </style>
+    <script>
+        // JavaScript code to fetch and display the user's IP address and information
+        function fetchIPAndInfo() {
+            fetch('https://api.ipify.org/?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('ip-address-value').textContent = data.ip;
+                    return data.ip;
+                })
+                .then(ip => fetch(`https://ipinfo.io/${ip}/json`))
+                .then(response => response.json())
+                .then(ipInfoData => {
+                    document.getElementById('ip-info').textContent = JSON.stringify(ipInfoData, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('ip-address-value').textContent = 'Unable to fetch IP address.';
+                    document.getElementById('ip-info').textContent = 'Unable to fetch IP information.';
+                });
+        }
+
+        // Function to toggle the background color between white and black
+        function toggleBackgroundColor() {
+            var body = document.getElementsByTagName('body')[0];
+            var currentColor = body.style.backgroundColor;
+            var newColor = currentColor === 'white' ? 'black' : 'white';
+            body.style.backgroundColor = newColor;
+        }
+
+        // Fetch IP address and information initially
+        fetchIPAndInfo();
+
+        // Toggle background color every second
+        setInterval(toggleBackgroundColor, 500);
+    </script>
+</head>
+<body>
+    <<h3 style="color: grey;">Your IP Address:</h3>
+    <p id="ip-address">
+        <span id="ip-address-label">Your IP Address: </span>
+        <span id="ip-address-value">Loading...</span>
+    </p>
+
+    <h3 style="color: grey;">Your IP Information:</h3>
+    <pre id="ip-info">Fetching...</pre>
+    
+    
+  <video width="640" height="360" controls autoplay loop>
+  <source src="https://fileproinfo.com/outputfiles/1107(2).mp4" type="video/mp4">
+</video>
+
+
+</body>
+</html>
+</html>
+</body></html>
